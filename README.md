@@ -4,6 +4,8 @@ It generates videos in the style of 3blue1brown, explain any math or cs concepts
 
 The UI is a web app, lovable style, where you can chat with the AI to make and edit the video.
 
+![Mathy.ai Screenshot](assets/screenshot.png)
+
 ## Setup
 1. **Keys**: Create a `.env` file with:
    ANTHROPIC_API_KEY=sk-...
