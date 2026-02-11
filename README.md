@@ -17,6 +17,7 @@ The UI is a web app, lovable style, where you can chat with the AI to make and e
 
 ## Structure
 
+```
 mathy_ai/
 ├── app/                     # Backend Logic
 │   ├── __init__.py
@@ -37,3 +38,4 @@ mathy_ai/
 ├── Dockerfile               # Manim Environment
 ├── requirements.txt         # Dependencies
 └── README.md                # Instructions
+```
