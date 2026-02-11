@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathy.ai - Workspace</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="app-container">
+        
+        <aside class="chat-panel">
+            <header class="chat-header">
+                <div class="logo">Mathy<span>_ai</span></div>
+                <div class="settings">
+                    <select id="provider" title="Audio Provider">
+                        <option value="elevenlabs">ElevenLabs (Pro)</option>
+                        <option value="google">Google TTS (Free)</option>
+                        <option value="none">No Audio</option>
+                    </select>
+                </div>
+            </header>
+
+            <div id="chat-history" class="chat-history">
+                <div class="message system">
+                    <div class="avatar"><i class="fa-solid fa-robot"></i></div>
+                    <div class="bubble">
+                        Hello! I'm Mathy. What math concept shall we visualize today?
+                    </div>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <textarea id="prompt" placeholder="Describe your animation..." rows="1"></textarea>
+                    <button id="sendBtn" onclick="sendMessage()">
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="preview-stage">
+            <div class="stage-content">
+                <div id="placeholder-state" class="placeholder-state">
+                    <i class="fa-solid fa-film"></i>
+                    <p>Your generated video will appear here.</p>
+                </div>
+
+                <div id="video-wrapper" class="video-wrapper hidden">
+                    <video id="videoPlayer" controls>
+                        <source src="" type="video/mp4">
+                        Your browser does not support video.
+                    </video>
+                    <div class="video-actions">
+                        <a id="downloadLink" href="#" download class="action-btn">
+                            <i class="fa-solid fa-download"></i> Download
+                        </a>
+                        <span id="renderTime" class="meta-info"></span>
+                    </div>
+                </div>
+
+                <div id="loading-overlay" class="loading-overlay hidden">
+                    <div class="spinner"></div>
+                    <p id="loading-text">Generating script...</p>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.env
+.venv/
+media/
+gen_scene.py
+.DS_Store
